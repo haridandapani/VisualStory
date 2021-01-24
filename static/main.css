@@ -251,13 +251,9 @@ code.inline {
 
 /* LINKS AS BUTTONS STYLING */
 
-a {
+a, a:visited  {
     cursor: pointer;
     text-decoration: underline;
-    color: inherit;
-}
-
-a:visited {
     color: inherit;
 }
 
@@ -345,7 +341,6 @@ a:visited {
     box-sizing: border-box;
 
     color: #fff;
-    text-transform: uppercase;
     font-family: 'Lato', sans-serif;
 }
 

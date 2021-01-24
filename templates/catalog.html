@@ -1,6 +1,6 @@
 <html>
     <meta charset="UTF-8">
-    <title>Catalog</title>
+    <title>Visual Adventure Catalog</title>
     <link rel="stylesheet" href="{{ url_for('static',filename='main.css') }}" type="text/css">
     <link rel="icon" type="image/png" href="{{ url_for('static',filename='favicon.ico') }}">
     <body>
@@ -9,17 +9,17 @@
         </div>
         <br>
         <div align = "center">
-        	<h2>Catalog</h2>
+        	<h2>Behold our Catalog of Visual Novels</h2>
             <br>
-            <ol> 
+            <ul style="list-style-type: none;"> 
             <!-- For loop logic of jinja template -->
             {%for i in range(0, length)%} 
-                <li>
-                    <a href =  "{{ ids[i] ~ "/1" }}">{{titles[i]}} by {{ authors[i] }}</a>
+                <li style="list-style-type: none;">
+                    <a class = "buttoner" href =  "{{ ids[i] ~ "/1" }}">{{titles[i]}} by {{ authors[i] }}</a><br><br><br>
                 </li> 
             {%endfor%} 
               
-            </ol> 
+            </ul> 
         </div>
     </body>
 
