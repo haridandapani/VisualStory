@@ -1,2 +1,3 @@
-# ComputationalBiologyWeb
-An online webapp for cool computational biology tools
+# Visual Story
+An online webapp for telling Visual Stories
+https://visualadventure.herokuapp.com
