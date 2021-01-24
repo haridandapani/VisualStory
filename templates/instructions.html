@@ -1,0 +1,23 @@
+<html>
+<meta charset="UTF-8">
+
+<title>Story</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='main.css') }}" type="text/css">
+
+    <link rel="icon" type="image/png" href="{{ url_for('static',filename='favicon.ico') }}">
+
+    <body>
+        <div id = "homer">
+            <a href = "/">Home</a>
+        </div>
+        <div id = "output" align = "center">
+            <h3>Each panel needs an image, a dialog for the character in the image, three response options, and corresponding 
+            redirects for each of the response options.</h3>
+            <h3>The redirect sends it from the current panel to the panel specified. If the panel is not in range of any current panels,
+            then the game will redirect you to an end screen.</h3>
+            <h3>The text options can all redirect to the same place, although many players will like the feeling of variety with their choices.</h3>
+
+            <a href = "/create">Create a Visual Novel</a>
+        </div>
+    </body>
+</html>

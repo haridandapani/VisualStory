@@ -1,0 +1,38 @@
+<html>
+<meta charset="UTF-8">
+
+<title>Story</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='main.css') }}" type="text/css">
+
+    <link rel="icon" type="image/png" href="{{ url_for('static',filename='favicon.ico') }}">
+
+    <body>
+        <div id = "homer">
+            <a href = "/">Home</a>
+            <audio AutoPlay loop>
+            	<source src={{ url_for('download',filename=audio)}}>
+			</audio>
+        </div>
+        <div id = "output" align = "center">
+        	<div class = "fitter">
+	            {% if image  -%}
+	              <img style='height: 70%; width: 100%; object-fit: contain' src={{ url_for('download',filename=image)}} alt="panel-image"/> 
+	            {% endif -%}
+	        </div>
+	        {% if convo  -%}
+            <hr><br>
+            <h3>{{ convo }}</h3>
+            {% endif -%}
+            <hr><br>
+            {% if speechone  -%}
+            <a href = "{{redirone}}" class = "buttoner" >{{ speechone }}</a>
+            {% endif -%}
+            {% if speechtwo  -%}
+            <a href = "{{redirtwo}}" class = "buttoner" >{{ speechtwo }}</a>
+            {% endif -%}
+            {% if speechthree  -%}
+            <a href = "{{redirthree}}" class = "buttoner" >{{ speechthree }}</a>
+            {% endif -%}
+        </div>
+    </body>
+</html>

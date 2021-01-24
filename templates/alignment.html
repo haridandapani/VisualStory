@@ -1,0 +1,27 @@
+<html>
+<meta charset="UTF-8">
+
+<title>Story</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='main.css') }}" type="text/css">
+
+    <link rel="icon" type="image/png" href="{{ url_for('static',filename='favicon.ico') }}">
+
+    <body>
+        <div id = "homer">
+            <a href = "/">Home</a>
+        </div>
+        <div id = "output" align = "center">
+            <div class = "container">
+                {% if image  -%}
+                  <img src={{ url_for('download',filename=image)}} alt="panel-image"> 
+                {% endif -%}
+                <hr>
+                <div class = "centered"><h3>{{ convo }}</h3></div>
+            </div>
+            <hr>
+            <a href = "{{redirone}}" class = "buttoner" >{{ speechone }}</a>
+            <a href = "{{redirtwo}}" class = "buttoner" >{{ speechtwo }}</a>
+            <a href = "{{redirthree}}" class = "buttoner" >{{ speechthree }}</a>
+        </div>
+    </body>
+</html>

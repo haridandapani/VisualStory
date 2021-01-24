@@ -1,0 +1,29 @@
+<html>
+    <meta charset="UTF-8">
+    <title>Create Your Visual Novel</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='main.css') }}" type="text/css">
+    <link rel="icon" type="image/png" href="{{ url_for('static',filename='favicon.ico') }}">
+    <script type="text/javascript" src = "{{ url_for('static',filename='alignment.js') }}"></script>
+    <body onload = "loader()">
+        <div id = "homer">
+            <a href = "/">Home</a> | <a href = "/instructions">Instructions</a>
+        </div>
+        <br>
+        <form method = "POST" action = "/createstory" enctype="multipart/form-data">
+        <div align = "center">
+        <label>Title of your story: </label>
+        <input type = "text" name = "title" id = "title" required></input><br>
+        <label>Author's name: </label>
+        <input type = "text" name = "author" id = "author" placeholder="Anonymous"></input><br>
+        <hr>
+        <form id = "form" class = "basic-form">
+        <div id = "story">
+
+        </div>
+        <p class = "buttoner" onclick="loader()">Add panel</p>
+        <hr>
+        <button class = "buttoner" onclick = "submitForm()">Submit story to catalog</button>
+        </form>
+        </div>
+    </body>
+</html>

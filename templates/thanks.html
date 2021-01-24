@@ -1,0 +1,23 @@
+<html>
+<meta charset="UTF-8">
+
+<title>Story</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='main.css') }}" type="text/css">
+
+    <link rel="icon" type="image/png" href="{{ url_for('static',filename='favicon.ico') }}">
+
+    <body>
+        <div id = "homer">
+            <a href = "/">Home</a>
+        </div>
+        <div id = "output" align = "center">
+            {% if story  -%}
+            {% if author  -%}
+            <h3>Thank you for playing {{ story }} by {{ author }}.</h3>
+            {% endif -%}
+            {% endif -%}
+            <h3>Please return home and try another visual story.</h3>
+            <a href = "/">Home</a>
+        </div>
+    </body>
+</html>

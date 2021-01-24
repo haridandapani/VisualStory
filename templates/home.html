@@ -1,0 +1,17 @@
+<html>
+    <meta charset="UTF-8">
+    <title>Your Visual Novel</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='main.css') }}" type="text/css">
+    <link rel="icon" type="image/png" href="{{ url_for('static',filename='favicon.ico') }}">
+    <body>
+        <br>
+        <div align = "center">
+        	<h2>Your Visual Novel by Kirb c:</h2>
+            <br>
+            <a href = "/create"><button class = "buttoner">Create a Visual Novel</button></a>
+            <a href = "/catalog"><button class = "buttoner">View our Catalog</button></a>
+            <br>
+            <img src={{ url_for('download',filename="host.png")}} alt="host-image" style='height: 70%; width: 100%; object-fit: contain'> 
+        </div>
+    </body>
+</html>
